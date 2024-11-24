@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://drxhp11h7thdm"]
+[gd_scene load_steps=9 format=3 uid="uid://de5fno11x714m"]
 
 [ext_resource type="Texture2D" uid="uid://bbebwjnpunvel" path="res://bald_man.png" id="1_e1wxu"]
 [ext_resource type="Script" path="res://agent.gd" id="1_wrsxo"]
+[ext_resource type="Texture2D" uid="uid://ctsp8fcekp1p2" path="res://lvl_0 copy.png" id="2_ygpvd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s46sc"]
 atlas = ExtResource("1_e1wxu")
@@ -29,7 +30,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nyvpb"]
@@ -40,10 +41,16 @@ script = ExtResource("1_wrsxo")
 speed = 400
 metadata/_edit_group_ = true
 
+[node name="background" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_ygpvd")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_iuo66")
-frame_progress = 0.330804
+frame_progress = 0.350689
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 2)
