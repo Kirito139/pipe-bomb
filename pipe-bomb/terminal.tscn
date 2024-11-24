@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjmos37gcfsy1"]
+
+[ext_resource type="Script" path="res://terminal.gd" id="1_6dl3t"]
+[ext_resource type="Texture2D" uid="uid://wjuu6ayjoov4" path="res://blackd.png" id="1_kx332"]
+[ext_resource type="Script" path="res://terminaltext.gd" id="3_vdjl5"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("1_6dl3t")
+
+[node name="Blackd" type="Sprite2D" parent="Node2D"]
+position = Vector2(649.027, 644.15)
+rotation = -1.5708
+scale = Vector2(2.34317, 5.43435)
+texture = ExtResource("1_kx332")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Node2D"]
+offset_left = 18.0
+offset_top = 447.0
+offset_right = 1252.0
+offset_bottom = 779.0
+text = ">"
+script = ExtResource("3_vdjl5")
