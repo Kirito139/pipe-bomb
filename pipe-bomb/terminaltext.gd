@@ -16,4 +16,7 @@ func _input(event):
 		print(key)
 		if key == "Space":
 			key = " "
+		elif key == "Enter":
+			text = "> "
+			return
 		text += key
