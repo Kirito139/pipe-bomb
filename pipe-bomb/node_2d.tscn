@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://drxhp11h7thdm"]
+
+[ext_resource type="Texture2D" uid="uid://bbebwjnpunvel" path="res://bald_man.png" id="1_e1wxu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s46sc"]
+atlas = ExtResource("1_e1wxu")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlubx"]
+atlas = ExtResource("1_e1wxu")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhsym"]
+atlas = ExtResource("1_e1wxu")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iuo66"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s46sc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlubx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhsym")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nyvpb"]
+size = Vector2(18, 40)
+
+[node name="Agent" type="Area2D"]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_iuo66")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_nyvpb")

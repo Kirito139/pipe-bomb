@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DQDialoguePlayerSettings" load_steps=2 format=3 uid="uid://br1srvonmm4ok"]
+
+[ext_resource type="Script" path="res://addons/dialogue_quest/scripts/ui/dialogue/components/resources/settings/dialogue_player_settings.gd" id="1_gttkv"]
+
+[resource]
+script = ExtResource("1_gttkv")
+autoplay_enabled = true
+autoplay_delay_sec = 1.0
+autoplay_on_start = false
+skip_enabled = true
+skip_speed = 10
+skip_after_choices = false
+skip_stop_on_dialogue_end = true
+run_expressions_as_script = false
